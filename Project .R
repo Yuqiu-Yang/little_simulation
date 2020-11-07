@@ -33,7 +33,7 @@ estimator <- function(x, w, FUN, ...)
 }
 
 
-outlier_generator <- function(n_total, n_outlier,
+outlierGenerator <- function(n_total, n_outlier,
                               FUN, loc = 0, 
                               sig = 1, ...)
 {
@@ -46,7 +46,7 @@ outlier_generator <- function(n_total, n_outlier,
   return(x)
 }
 
-# a <- outlier_generator(1000, rbinom(1, 1000, 0.1), FUN = rnorm, sig = 1, loc = 10)
+# a <- outlierGenerator(1000, rbinom(1, 1000, 0.1), FUN = rnorm, sig = 1, loc = 10)
 
 
 
