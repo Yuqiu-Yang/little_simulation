@@ -33,6 +33,7 @@ for(size in n)
     {
       # generate observations
       x <- do.call(outlierGenerator, args = args_list)
+      x <- sort(x)
       # estimate
       estimates[i, ,j] <- sapply(funs, function(f){f(x)})
     }
