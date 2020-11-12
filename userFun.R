@@ -60,7 +60,7 @@ estimatorGenerator <- function(n_total, r_list, ...)
 
 outlierGenerator <- function(n_total, n_outlier,
                               FUN, loc = 0, 
-                              sig = 1, ...)
+                              sig = 1, scale_factor = 1,...)
 {
   # This function can generate n_total r.vs
   # that contain n_outlier outliers
@@ -70,7 +70,7 @@ outlierGenerator <- function(n_total, n_outlier,
     temp <- x[1:n_outlier]
     x[1:n_outlier] <- sig * temp + loc
   }
-  return(x)
+  return(x/scale_factor)
 }
 
 
